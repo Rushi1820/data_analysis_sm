@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pandas
+numpy
+scipy
+statsmodels
+scikit-learn
+matplotlib
+seaborn
+google-generativeai 
+prophet
+spacy
+Levenshtein
+shap
+xgboost
