@@ -27,6 +27,10 @@ Step 4: Install all dependencies
 
 pip install -r requirements.txt
 
+Step 5: Download the spacy model
+
+python -m spacy download en_core_web_sm  
+
 Step 5: run the application
 
 uvicorn main:app --reload 
