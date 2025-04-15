@@ -19,6 +19,7 @@ Step 2: set the directory
 
 cd Diagnostic Agent
 Step 3: Create Virtual env
+
 python -m venv env         
 
 Step 4: activate the env
@@ -33,6 +34,7 @@ Step 5: run the application
 uvicorn main:app --reload 
 
 you will find the swagger document in the following link:
+
 http://localhost:8000/docs
 
 
