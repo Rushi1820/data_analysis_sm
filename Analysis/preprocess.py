@@ -79,6 +79,8 @@ def preprocess(matched_model):
 
         # These don’t represent normal trends and can mislead models like XGBoost or visualizations.
         
+        #  if not required we can skip it 
+        
     for column in numerical_columns:
          # Calculate 7-day rolling mean
         rolling_mean = df[column].rolling(window=7, min_periods=1).mean()  

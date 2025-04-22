@@ -30,22 +30,16 @@ def correlation_analysis(df):
         plt.close()
         logger.info("Saved heatmap as heatmap.png")
 
-        #Granger Casuality Test
-        # Granger Causality Test helps determine whether changes in ad spend can predict changes in sales
-        # It assumes time-series data and checks if the lagged values of 'Ad Spend' add predictive power to 'Units Sold'
-        #If not required comment the code and remove from the return 
-        if df_corr.shape[0] > 10: 
-            granger_df = df_corr[["Units Sold", "Ad Spend (USD)"]].dropna()
-            max_lag = 3  # Reduced lag if data is small
-            logger.info("Performing Granger Causality Test")
-            granger_results = grangercausalitytests(granger_df, max_lag, verbose=False)
-            logger.info("Granger Causality Test completed")
-        else:
-            logger.warning("Not enough data points for Granger Causality Test")
-            granger_results = None
 
-        return pearson_corr, spearman_corr, granger_results
+        return {
+
+            "pearson_correlation": pearson_corr.to_dict(),
+            "spearman_correlation": spearman_corr.to_dict()
+        }
 
     except Exception as e:
         logger.error(f"Error in correlation_analysis: {str(e)}", exc_info=True)
         return {"error": str(e)}
+
+
+# If you have any doubts or suggestions please drop a message to me(rushi) or aman

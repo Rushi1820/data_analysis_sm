@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 import pandas as pd
-from Analysis import preprocess, Timeanalysis, correlations, regression, genai,shap
+from Analysis import preprocess, Timeanalysis, correlations, regression, genai,shap,crewai
 from logging_config import logger
 
 router = APIRouter()
@@ -24,8 +24,11 @@ def ai_insights(user_query:str):
         regression_results = regression.regression_analysis(df)
         logger.info("genai summary started")
         shap_sales_insights= shap.shap_sales_insights(df)
-        # Step 5: Generate AI Summary
-        summary_text = genai.generate_summary(model,user_query,time_series_results, correlation_results, regression_results,shap_sales_insights)
+        # Step 5: Crew AI 
+        logger.info("CrewAI analysis started")
+        analysis_summary = crewai.run_analysis(time_series_results, correlation_results, regression_results)
+        # Gemini Summarization
+        summary_text = genai.generate_summary(model,user_query,analysis_summary,shap_sales_insights)
 
         # Return all results
         return {

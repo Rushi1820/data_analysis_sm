@@ -13,3 +13,7 @@ spacy
 Levenshtein
 shap
 xgboost
+langchain_google_genai
+crewai
+crewai_tools
+lightgbm
