@@ -69,4 +69,4 @@ def shap_sales_insights(df):
     return summary_text
 
 #  Currently all the models do run every time when we hit the api we can use the weights and decrease the latency.
-# If you have any doubts or suggestions please drop a message to me(rushi) or aman
+# If you have any doubts or suggestions, please feel free to reach out to(rushi) or aman

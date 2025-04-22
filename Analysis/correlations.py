@@ -42,4 +42,4 @@ def correlation_analysis(df):
         return {"error": str(e)}
 
 
-# If you have any doubts or suggestions please drop a message to me(rushi) or aman
+# If you have any questions or suggestions, please feel free to reach out to me(rushi) or aman

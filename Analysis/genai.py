@@ -78,4 +78,4 @@ def generate_summary(model,user_query,complete_analytical_results,shap_sales_ins
 # - Work on Better prompting for clear and desired output summary
 
 
-# If you have any doubts or suggestions please drop a message to me(rushi) or aman
+# If you have any doubts or suggestions, please feel free to reach out to me(rushi) or aman

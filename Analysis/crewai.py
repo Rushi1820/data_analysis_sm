@@ -152,4 +152,4 @@ def run_analysis(timeseriesanalysis, correlationanalysis, regressionanalysis):
     return combined_results
 
 
-# If you have any doubts or suggestions please drop a message to me(rushi) or aman
+# If you have any doubts or suggestions, please feel free to reach out to me(rushi) or aman
